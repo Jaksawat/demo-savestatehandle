@@ -1,4 +1,4 @@
-package com.wiwat.template
+package com.demo.template
 
 import org.junit.Test
 

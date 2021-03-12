@@ -1,12 +1,12 @@
-package com.wiwat.template.view.base
+package com.demo.template.view.base
 
-import android.content.Context
 import android.os.Bundle
+import androidx.annotation.IdRes
 import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
-import io.github.inflationx.viewpump.ViewPumpContextWrapper
+import androidx.fragment.app.Fragment
 
 /**
  * @author Leopold
@@ -23,7 +23,12 @@ abstract class BindingActivity<T : ViewDataBinding> : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, getLayoutResId())
     }
 
-    override fun attachBaseContext(newBase: Context?) {
-        super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase!!))
+    protected fun addFragment(@IdRes containerViewId: Int, fragment: Fragment?) {
+        fragment?.let {
+            supportFragmentManager.beginTransaction()
+                .add(containerViewId, fragment, fragment.javaClass.simpleName)
+                .addToBackStack(null)
+                .commitAllowingStateLoss()
+        }
     }
 }

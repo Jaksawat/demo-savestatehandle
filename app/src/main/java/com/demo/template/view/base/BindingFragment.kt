@@ -1,4 +1,4 @@
-package com.wiwat.template.view.base
+package com.demo.template.view.base
 
 import android.os.Bundle
 import android.view.LayoutInflater

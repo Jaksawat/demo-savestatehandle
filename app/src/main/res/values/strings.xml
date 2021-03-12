@@ -15,7 +15,7 @@
 -->
 
 <resources>
-    <string name="app_name">template</string>
+    <string name="app_name">Demo</string>
     <string name="font_medium">font/NotoSansThaiUI-Bold.ttf</string>
     <string name="theme_name_hint">Theme name...</string>
 
@@ -117,4 +117,6 @@
     <string name="title_connect_bluetooth">เชื่อมต่อ</string>
     <string name="cancel">ยกเลิก</string>
     <string name="title_search_bluetooth">ค้นหาอุปกรณ์</string>
+    <string name="initial_name">test_test</string>
+    <string name="saved_in_vm">Saved in ViewModel: %s</string>
 </resources>
